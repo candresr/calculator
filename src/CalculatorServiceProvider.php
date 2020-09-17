@@ -3,7 +3,7 @@
 namespace Nomada\Calculator;
 
 use Illuminate\Support\ServiceProvider;
-use TestCommand;
+// use TestCommand;
 
 class CalculatorServiceProvider extends ServiceProvider
 {
@@ -16,6 +16,7 @@ class CalculatorServiceProvider extends ServiceProvider
     {
         //
         $this->app->make('Nomada\Calculator\CalculatorController');
+        $this->app->make('Nomada\Calculator\TestCommand');
         $this->loadViewsFrom(__DIR__.'/views', 'calculator');
         $this->loadMigrationsFrom(__DIR__.'/migrations/migrations');
     }
