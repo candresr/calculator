@@ -1,0 +1,18 @@
+{
+    "name": "nomada/calculator",
+    "description": "test demo package",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "candresr",
+            "email": "candresramirez@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Nomada\\Calculator\\": "/src"
+        }
+    }
+}
