@@ -1,7 +1,6 @@
 {
     "name": "nomada/calculator",
     "description": "test demo package",
-    "license": "GPL",
     "authors": [
         {
             "name": "candresr",
