@@ -1,6 +1,7 @@
 {
     "name": "nomada/calculator",
     "description": "test demo package",
+    "license": "MIT",
     "authors": [
         {
             "name": "Cesar Ramirez",
