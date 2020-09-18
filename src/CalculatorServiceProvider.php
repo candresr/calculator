@@ -18,12 +18,7 @@ class CalculatorServiceProvider extends ServiceProvider
         $this->app->make('Nomada\Calculator\CalculatorController');
         $this->app->make('Nomada\Calculator\TestCommand');
         $this->loadViewsFrom(__DIR__.'/views', 'calculator');
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                TestCommand::class
-            ]);
-        }
+        
     }
 
     /**
@@ -34,6 +29,7 @@ class CalculatorServiceProvider extends ServiceProvider
     public function boot()
     {
         include __DIR__.'/routes.php';
+        $this->loadMigrationsFrom(__DIR__.'/migrations');
         if ($this->app->runningInConsole()) {
             $this->commands([
                 TestCommand::class
