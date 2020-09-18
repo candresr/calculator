@@ -29,12 +29,13 @@ class CalculatorServiceProvider extends ServiceProvider
     public function boot()
     {
         include __DIR__.'/routes.php';
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                TestCommand::class
-            ]);
-        }
+
+        $this->loadMigrationsFrom(__DIR__.'/migrations/product_table.php');
+        // if ($this->app->runningInConsole()) {
+        //     $this->commands([
+        //         TestCommand::class
+        //     ]);
+        // }
 
     }
 }
