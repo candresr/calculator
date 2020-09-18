@@ -38,6 +38,5 @@ class TestCommand extends Command
     public function handle()
     {
         Artisan::call('migration', array('--force' => true));
-        return 0;
     }
 }
