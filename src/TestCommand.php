@@ -37,7 +37,7 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        Artisan::call('make:migration', ['name' => 'product_table']);
+        Artisan::call('make:migration', array('--force' => true));
         return 0;
     }
 }

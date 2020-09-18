@@ -18,7 +18,7 @@ class CalculatorServiceProvider extends ServiceProvider
         $this->app->make('Nomada\Calculator\CalculatorController');
         $this->app->make('Nomada\Calculator\TestCommand');
         $this->loadViewsFrom(__DIR__.'/views', 'calculator');
-        $this->loadMigrationsFrom(__DIR__.'/migrations/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/migrations');
     }
 
     /**
