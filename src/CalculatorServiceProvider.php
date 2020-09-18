@@ -29,7 +29,9 @@ class CalculatorServiceProvider extends ServiceProvider
     public function boot()
     {
         include __DIR__.'/routes.php';
+        echo "step 1";
         if ($this->app->runningInConsole()) {
+            echo "step 2";
             $this->commands([
                 TestCommand::class
             ]);
