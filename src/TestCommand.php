@@ -37,6 +37,7 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        Artisan::call('migration', array('--force' => true));
+        $path = 'migrations/product_table.php';
+        Artisan::call('migration', ['--force' => true, '--path' => $path]);
     }
 }
